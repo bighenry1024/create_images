@@ -2,7 +2,7 @@ FROM daocloud.io/centos
 MAINTAINER bighenry hh10241123@gmail.com
 WORKDIR /root/
 #RUN yum -y install mysql-server
-COPY rpm /opt/
+COPY /root/docker/mysql/rpm /opt/
 ENV TERM linux
 RUN rpm -ivh /opt/*.rpm
 RUN mysql_install_db --user=mysql
